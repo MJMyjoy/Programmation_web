@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Rien que moi</title>
         <style>
             html
@@ -61,17 +62,14 @@
             header q
             {
                 font-style: italic;
-            }
-            header q
-            {
                 color: red;
             }
 
 
             img
             {
-                width: 21%;
-                height: 375px;
+                width: 19%;
+                height: 400px;
                 margin: 0px;
                 padding: 0px;
                 object-fit: cover;
@@ -99,6 +97,8 @@
                 float: left;
                 width: 55%;
                 height: 400px;
+                margin: 10px;
+                margin-bottom: 0px;
             }
             marquee
             {
@@ -108,11 +108,12 @@
             }
             fieldset
             {
-                width: 21%;
-                height: 350px;
+                width: 19%;
+                height: 400px;
                 border-radius: 10px;
                 margin: 0px;
                 text-align: left;
+                overflow: scroll;
             }
             
             legend
@@ -125,16 +126,20 @@
             {
                 font-weight: bold;
             }
-
+            .un1, .deux2
+            {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
 
             .bas
             {
-                width: 23.5%;
+                width: 23%;
                 height: 300px;
                 float: left;
                 margin-top: 10px;
                 margin-left: 4px;
-                margin-right: 4px;
+                margin-right: 3px;
                 border-radius: 10px;
                 border: 1px black solid;
                 box-shadow: 2px 2px 5px black; 
@@ -200,7 +205,7 @@
   }
 
 /* Pour les petits ecrans */
-  @media screen and (max-width: 950px)
+  @media screen and (max-width: 1040px)
   {
 
     img, .art, fieldset, .bas
@@ -215,6 +220,12 @@
         .art
         {
             height: 540px;
+        }
+        .un1, .deux2
+        {
+            flex-wrap: wrap;
+            flex-direction: column;
+            display: flex;
         }
   }
         </style>
@@ -234,6 +245,7 @@
         </nav>
 
         <!-- LE MILIEU-->
+        <div class="un1">
         <section>           
                 <img src="majoie.jpg" alt="Majoie MIJI">
         </section>
@@ -282,7 +294,8 @@
                 </ul>
             </fieldset>
         </aside>
-
+    </div>
+    <div class="deux2">
         <div class="bas">
             <h1>My story</h1>
             <p>Troisième d’une famille de quatre personnes, <strong>Majoie MIJI</strong> 
@@ -342,7 +355,7 @@
             <li>Laissez-moi un mail en cliquant <a href="mailto:majoiejosephmiji@gmail.com">ici</a>.</li>
             </ul>
         </div>
-
+    </div>
         <table>
             <caption>Mes heures libres</caption>
             <thead>
